@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard – NotesVault</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/extra.css"></head><body>
+<aside class="sidebar" id="sidebar"></aside>
+<main class="main">
+<div class="topbar"><button class="btn ghost menu-btn" id="menuBtn" aria-label="Menu"><i data-lucide="menu"></i></button><div class="top-right"><button class="btn ghost" id="themeBtn" aria-label="Toggle theme"><i data-lucide="moon"></i></button></div></div>
+<h1>Welcome back, Student!</h1>
+<p class="muted" style="margin:6px 0 18px">Here is what is happening across NotesVault.</p>
+<div class="stats" id="dStats"></div>
+<h2>Subject shortcuts</h2>
+<div class="actions" id="dSubjects" style="margin:0 0 24px"></div>
+<div class="split">
+  <div class="card"><h2>Recently viewed</h2><div id="dRecent"></div></div>
+  <div class="card"><h2>Popular notes</h2><div id="dPopular"></div></div>
+</div>
+<div class="card" style="margin-top:18px"><h2>Recent uploads</h2><div id="dUploads"></div></div>
+
+<footer>NotesVault · Demo project · Data is stored only in this browser.</footer>
+</main>
+<div class="modal" id="modal"><div class="box"><div class="topbar"><h2 id="modalTitle"></h2><button class="btn sm ghost" onclick="closeModal()">Close</button></div><div id="modalBody"></div></div></div>
+<div class="toasts"></div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/data.js"></script><script src="js/storage.js"></script><script src="js/app.js"></script><script src="js/dashboard.js"></script>
+</body></html>

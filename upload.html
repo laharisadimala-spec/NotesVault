@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Upload Notes – NotesVault</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/extra.css"></head><body>
+<aside class="sidebar" id="sidebar"></aside>
+<main class="main">
+  <div class="topbar"><button class="btn ghost menu-btn" id="menuBtn"><i data-lucide="menu"></i></button>
+    <button class="btn ghost" id="themeBtn"><i data-lucide="moon"></i>Theme</button></div>
+  <h1 style="margin-bottom:6px">Upload Notes</h1>
+  <p class="muted" style="margin-bottom:20px">Demo only: uploaded files are stored locally in your browser and are not shared across users or devices. Only metadata is kept after a reload.</p>
+  <form class="card" id="uploadForm" novalidate>
+    <div class="form-grid">
+      <div class="full"><label>Document title</label><input name="title" data-req><div class="err"></div></div>
+      <div><label>University</label><input name="university" value="Osmania University" data-req><div class="err"></div></div>
+      <div><label>College</label><input name="college" value="Stanley College of Engineering and Technology for Women" data-req><div class="err"></div></div>
+      <div><label>Branch</label><select name="branch" data-req><option value="">Select</option><option>CSE</option><option>ECE</option><option>EEE</option><option>IT</option></select><div class="err"></div></div>
+      <div><label>Year</label><select name="year" data-req><option value="">Select</option><option>1st</option><option>2nd</option><option>3rd</option><option>4th</option></select><div class="err"></div></div>
+      <div><label>Semester</label><select name="semester" data-req><option value="">Select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select><div class="err"></div></div>
+      <div><label>Subject</label><select name="subject" data-req></select><div class="err"></div></div>
+      <div><label>Unit</label><select name="unit" data-req><option value="">Select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select><div class="err"></div></div>
+      <div class="full"><label>Description</label><textarea name="description" rows="3"></textarea></div>
+      <div class="full"><label>File (PDF, PNG or JPG, max 5 MB)</label>
+        <label id="dropzone" class="card" style="cursor:pointer;text-align:center;font-weight:500"><i data-lucide="upload-cloud"></i>
+          <span>Click to choose a PDF or image</span>
+          <input type="file" name="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg" style="display:none"></label>
+        <div class="err" id="fileErr"></div></div>
+    </div>
+    <div class="actions"><button class="btn purple" type="submit"><i data-lucide="send"></i>Submit for review</button></div>
+  </form>
+  <div class="card" id="successBox" style="display:none;margin-top:18px;border-color:#1c7a45">
+    ✅ Upload received. It is now pending admin review and will appear in the library once approved.
+    <div class="actions"><a class="btn sm" href="library.html">Go to library</a></div></div>
+</main>
+<div class="toasts"></div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/data.js"></script><script src="js/storage.js"></script><script src="js/app.js"></script><script src="js/upload.js"></script>
+</body></html>
