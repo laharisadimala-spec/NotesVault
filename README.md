@@ -79,3 +79,4 @@ NotesVault/
 - **Vanilla JavaScript** (ES6+)
 - **Lucide Icons**
 - **Google Fonts** (Inter)
+"# NotesVault" 
